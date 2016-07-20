@@ -282,7 +282,7 @@ if(isset($_POST['nonpeza'])){
 
 
                                                 echo ' <tr>
-                                                <td>Date &nbsp;&nbsp;&nbsp; : &nbsp;<strong>' . date('Y-m-d G:i:s') .'</strong></td>
+                                                <td>Date &nbsp;&nbsp;&nbsp; : &nbsp;<strong>' . date('Y-m-d H:m:s') .'</strong></td>
                                                 </tr>
 
                                                 </table>
@@ -317,6 +317,7 @@ if(isset($_POST['nonpeza'])){
                                     <input type="hidden" name="domesticEnterprise" value="<?php echo $domesticEnterprise;?>">
                                     <input type="hidden" name="peza" value="<?php echo $peza;?>">
                                     <input type="hidden" name="nonpeza" value="<?php echo $nonpeza;?>">
+                                    <input type="hidden" name="procurement" value="<?php echo '0';?>">
 
                                     <?php 
                                      $count = count($_POST['HSCODE']);
