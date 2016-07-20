@@ -1,0 +1,53 @@
+ErrorDocument 400 /400
+ErrorDocument 401 /401
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 500 /500
+
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+
+
+##### AEDS #####
+RewriteRule ^(Exportable_Items|Submit_Export_Application|exportables|aedProcess|aedsForm|myAEDS|AEDS_Home)$ webfiles/AEDS/$1 [NC]
+
+####EZTS####
+RewriteRule	^(Profile_Page)$ webfiles/ezts/$1	[NC]
+
+####ITEM####
+RewriteRule	^(Apply_Item|Submit_Item_Application|Upload_Item|Item_List|EIP_Approved_Items)$ webfiles/ITEM/$1 [NC]
+
+####WEBFILES####
+RewriteRule	^(logout|Item|else|hscodes|change-password|tmp_name|nominatedcompanies|zones|myapproveditems|userRegistration|supplier|itemGroupName|Change_Password)$ webfiles/$1 [NC]
+
+####WEBFILES/PEZA####
+RewriteRule	^(PEZA_Nominate|PEZA_MyClients|PEZA_Nom_Profile)$ /webfiles/PEZA/$1 [NC]
+
+##### WEBFILES/VIEWS #####
+RewriteRule ^(login|home|printecert|checkexpired|importables|ImportablesUpload|AccountList|CreateUserLogin|CreateUserProfile|AddFund|eLOAForm|eCert|ProfilePage|AccountPage|Exportables|registersuretybond|ExportablesUpload|editItems|register|ApprovedItems|ForApproval|CreateCert|eCertBulkUpload|eCertForm|nominate|NominationList|NominationIsApproved|MyList|UserList|ActivateUserAccount|ApprovedAccount|ApprovedeCert|suretybondinfo|ForApprovaleCert|createELOA|ApprovedeLOA|myDeclarant|eCERTitems|myECERT|myELOA|itemlist|myEZTD|myInventory|myInventoryItems|itemlists|LOAlist|LOAlists|ZTDlist|myClients|received|PEZAaccountPage|TransactionHistoryPage|ELSEmyELOA|eZTD|ELSEmyEZTD|ELSEmyECERT|myNominee|ELSEprofilePage|ELSEdashboard|ELSEaccountPage|ELSEPEZAaccountPage|ELSEtransactionHistoryPage|printeloa|ELSEmyInventory|ELSEmyInventoryItems|printeztd|myInventoryItems2|CEitemTransaction|ELSEmyInventoryItems2|ELSEitemTransaction|NewDashboard|testpage2|testpage3|download|RejectNomination|printxactionsar|download_suretybond|UploadedFiles|downloadUploadedFiles|CashierTransactionList|AddFundConfirmation|printar|AllUserList|forgotpass|printxactionarvasp|printarvasp|ELSEprintecert|viewecert|eztdSummary|ELSEprinteztd|printxactionarvaspeztd|printxactionsareztd|myECERTforApproval|myECERTrejected|myELOAforApproval|myELOArejected|ELSEmyECERTforApproval|ELSEmyECERTrejected|ELSEmyELOAforApproval|ELSEmyELOArejected|ELSEmyEZTDforApproval|ELSEmyEZTDrejected|myEZTDforApproval|myEZTDrejected|viewEcert|viewELOA|ApplyItem|addServices|addRegisteredActivities|receiveEZTD|testsupplier|addSupplier|mySupplier|addItemgroup|itemsprocess|addItemGroupName|viewItemGroup|addItemGroupName|itemGroupNameList|itemGroupList|userServices|testfunctionpage|EIPS_Dashboard|EZTS_Home)$ /webfiles/EZTS/$1 [NC]
+
+##### EIPS #####
+RewriteRule ^(testpageeip|eIPs|eIPprocess|eIPForm|eIPeLOA|eIPaddService|eIPservices|eIPeditService|clientList|editFee|editFeeConfirmation|HSCList|editHSCode|eip_dashboard|eIP_applyItems|eIPitemsUpload|eIPList|eIPprint|eIPS_Item|Apply_eIPS|eIPS_Submit|eIPS_List|EIPS_Home)$ webfiles/EIPS/$1 [NC]
+
+
+##### WEBFILES/CONTROLLER #####
+RewriteRule ^(CreateUserLoginController|processEcert|CreateUserProfileController|AddFundController|eLOAController|eZTDController|eIPController|processRegistration|processNomination|processAddItemGroup|editFeeController|aedsController)$ webfiles/controllers/$1 [NC]
+
+#### TMP_NAME ####
+RewriteRule ^(footer)$ webfiles/includes/$1 [NC]
+
+####ERR-PAGE####
+RewriteRule	^(400|401|403|404|500)$	webfiles/err-page/$1 [NC]
+
+RewriteRule	^css/([a-zA-Z0-9-_\.]+)$ /assets/css/$1	[NC]
+RewriteRule	^js/([a-zA-Z0-9-_\.]+)$	/assets/js/$1	[NC]
+RewriteRule	^fonts/([a-zA-Z0-9-_\.]+)$	/assets/fonts/$1 [NC]
+RewriteRule	^img/(.+)$	/assets/img/$1 [NC]
+RewriteRule	^ico/(.+)$	/assets/ico/$1	[NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+

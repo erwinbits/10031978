@@ -1,0 +1,4 @@
+id,item category,hscode,item code,item name ,description,reg act,appno,tar ext,acct status,remarks,frequency
+0,0,HSCODE 3,Item Code 3,Item Name 3,Description 3,10/27/2015,0,TAR EXT 1,0,0,300
+0,0,HSCODE 4,Item Code 4,Item Name 4,Description 4,10/28/2015,0,TAR EXT 2,0,0,301
+0,0,HSCODE 5,Item Code 5,Item Name 5,Description 5,10/29/2015,0,TAR EXT 3,0,0,302

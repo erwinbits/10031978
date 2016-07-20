@@ -1,0 +1,53 @@
+#header_and_menu{
+margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#topheader{
+  width: 100%;
+  background: #ececec;
+  margin: 0px 0px;
+  padding: 0px;
+  min-height: 0px;
+  z-index: 9999;
+  /*position: relative;*/
+}
+.topheadercontainer{
+   width: 770px;
+  margin: 0 auto;
+}
+#topheaderlogo {
+  float: left;
+  position: relative;
+  padding: 10px 30px 7px 0px;
+}
+.containerheader{
+  width:855px;
+  margin:0 auto
+}
+
+.ui-autocomplete {
+  z-index: 100000;
+}
+
+.user-menu {
+    display: inline-block;
+    margin-top: -26px;
+    margin-right: 15px;
+    float: right;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.user-menu a {
+    color: #fff;
+}
